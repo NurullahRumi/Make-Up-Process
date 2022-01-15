@@ -1,0 +1,62 @@
+{
+  "statPrgid" : {
+    "_id" : "wm-statPrgid-wm.Variable-1510995117169",
+    "name" : "statPrgid",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "MK1100W10",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "svProcMK1100PK0_MK440GetjobLoadunldqty" : {
+    "_id" : "wm-svProcMK1100PK0_MK440GetjobLoadunldqty-wm.ServiceVariable-1510995082875",
+    "name" : "svProcMK1100PK0_MK440GetjobLoadunldqty",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pOrdnum",
+      "value" : "bind:pageParams.pOrdnum",
+      "type" : "string"
+    }, {
+      "target" : "pGmtseq",
+      "value" : "bind:pageParams.pGmtseq",
+      "type" : "string"
+    }, {
+      "target" : "pClrseqg",
+      "value" : "bind:pageParams.pClrseqg",
+      "type" : "integer"
+    }, {
+      "target" : "pSzeseq",
+      "value" : "bind:pageParams.pSizeseq",
+      "type" : "integer"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcMk1100pk0Mk440getjobLoadunldqtyResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcMK1100PK0_MK440GetjobLoadunldqty",
+    "operationId" : "ProcedureExecutionController_executeProcMK1100PK0_MK440GetjobLoadunldqty",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svProcMK1100PK0_MK440GetjobLoadunldqtyonBeforeUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "notifMsg" : {
+    "_id" : "wm-notifMsg-wm.NotificationVariable-1510735764029",
+    "name" : "notifMsg",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "title",
+      "value" : "bind:Variables.statPrgName.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "alerttype",
+      "value" : "error",
+      "type" : "string"
+    } ],
+    "operation" : "alert"
+  },
+  "statPrgid" : {
+    "_id" : "wm-statPrgid-wm.Variable-1510658854586",
+    "name" : "statPrgid",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "MK1100W15",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statPrgName" : {
+    "_id" : "wm-statPrgName-wm.Variable-1510658883193",
+    "name" : "statPrgName",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "Makeup Minutes Evolution",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "svGetMakeupUnit" : {
+    "_id" : "wm-svGetMakeupUnit-wm.ServiceVariable-1571382194906",
+    "name" : "svGetMakeupUnit",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Tt640pk0GetMakeupUnitResponse",
+    "service" : "pfsdb",
+    "operation" : "executeTT640pk0_getMakeupUnit",
+    "operationId" : "ProcedureExecutionController_executeTT640pk0_getMakeupUnit",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svProcMK1100PK0_QryMK721Prodmins" : {
+    "_id" : "wm-svProcMK1100PK0_QryMK721Prodmins-wm.ServiceVariable-1510721205347",
+    "name" : "svProcMK1100PK0_QryMK721Prodmins",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pUsrid",
+      "value" : "bind:Variables.statAppUsrid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.formFilter.formWidgets.pOrdnum.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pMaklcn",
+      "value" : "bind:Widgets.formFilter.formWidgets.pMaklcn.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pProddate",
+      "value" : "bind:Widgets.formFilter.formWidgets.pProddate.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcMk1100pk0QryMk721prodminsResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcMK1100PK0_QryMK721Prodmins",
+    "operationId" : "ProcedureExecutionController_executeProcMK1100PK0_QryMK721Prodmins",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  }
+}

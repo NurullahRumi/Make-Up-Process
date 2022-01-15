@@ -1,0 +1,233 @@
+{
+  "appNotification" : {
+    "_id" : "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
+    "name" : "appNotification",
+    "owner" : "App",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "goToPage_Main" : {
+    "_id" : "wm-wm.NavigationVariable1389180517517",
+    "name" : "goToPage_Main",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "operation" : "gotoPage",
+    "pageName" : "Main"
+  },
+  "goToPage_MakeupAudit" : {
+    "_id" : "wm-goToPage_MakeupAudit-wm.NavigationVariable-1511582471700",
+    "name" : "goToPage_MakeupAudit",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "MakeupAudit",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_MkupMinsEvolution" : {
+    "_id" : "wm-goToPage_MkupMinsEvolution-wm.NavigationVariable-1510658818662",
+    "name" : "goToPage_MkupMinsEvolution",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "MkupMinsEvolution",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_QryLoadingUnloading" : {
+    "_id" : "wm-goToPage_QryLoadingUnloading-wm.NavigationVariable-1510974101438",
+    "name" : "goToPage_QryLoadingUnloading",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "QryLoadingUnloading",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_ViewGarmentPhoto" : {
+    "_id" : "wm-goToPage_ViewGarmentPhoto-wm.NavigationVariable-1532422337271",
+    "name" : "goToPage_ViewGarmentPhoto",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "ViewGarmentPhoto",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_ViewOrderFitComments" : {
+    "_id" : "wm-goToPage_ViewOrderFitComments-wm.NavigationVariable-1532424783378",
+    "name" : "goToPage_ViewOrderFitComments",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "ViewOrderFitComments",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_ViewProductionDetails" : {
+    "_id" : "wm-goToPage_ViewProductionDetails-wm.NavigationVariable-1511670129976",
+    "name" : "goToPage_ViewProductionDetails",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "ViewProductionDetails",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "loggedInUser" : {
+    "_id" : "wm-loggedInUser-wm.Variable-1491820915544",
+    "name" : "loggedInUser",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "name" : "",
+      "id" : "",
+      "tenantId" : "",
+      "isAuthenticated" : false,
+      "isSecurityEnabled" : true,
+      "roles" : [ ]
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "loginAction" : {
+    "_id" : "wm-loginVariable-wm.LoginVariable-1491820915542",
+    "name" : "loginAction",
+    "owner" : "App",
+    "category" : "wm.LoginVariable",
+    "dataBinding" : [ {
+      "target" : "username",
+      "value" : "bind:Widgets.usernametext.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "password",
+      "value" : "bind:Widgets.passwordtext.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "rememberme",
+      "value" : "bind:Widgets.remembermecheck.datavalue",
+      "type" : "boolean"
+    } ],
+    "dataSet" : {
+      "username" : "",
+      "password" : "",
+      "rememberme" : false
+    },
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "onError" : "loginVariableonError($event, $s)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "useDefaultSuccessHandler" : true
+  },
+  "logoutAction" : {
+    "_id" : "wm-logoutVariable-wm.LogoutVariable-1491820915543",
+    "name" : "logoutAction",
+    "owner" : "App",
+    "category" : "wm.LogoutVariable",
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "redirectTo" : "Main",
+    "useDefaultSuccessHandler" : true
+  },
+  "navGotoQryLoadingUnloading" : {
+    "_id" : "wm-navGotoQryLoadingUnloading-wm.NavigationVariable-1526899524241",
+    "name" : "navGotoQryLoadingUnloading",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "QryLoadingUnloading",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ {
+      "type" : "string",
+      "target" : "orderNumber",
+      "value" : "bind:Widgets.lblOrder.caption"
+    } ],
+    "pageTransitions" : "none"
+  },
+  "statAppid" : {
+    "_id" : "wm-statAppid-wm.Variable-1491892023921",
+    "name" : "statAppid",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "OR1000"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statAppName" : {
+    "_id" : "wm-statAppname-wm.Variable-1491892046987",
+    "name" : "statAppName",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "Customer Care"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statAppUsrid" : {
+    "_id" : "wm-statUsrid-wm.Variable-1492235227154",
+    "name" : "statAppUsrid",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "bind:Variables.loggedInUser.dataSet.name.toUpperCase()",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}

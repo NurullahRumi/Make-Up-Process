@@ -1,0 +1,96 @@
+{
+  "notifMsg" : {
+    "_id" : "wm-notifMsg-wm.NotificationVariable-1511590613022",
+    "name" : "notifMsg",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "title",
+      "value" : "bind:Variables.statPrgName.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "alerttype",
+      "value" : "error",
+      "type" : "string"
+    } ],
+    "operation" : "alert"
+  },
+  "statPrgid" : {
+    "_id" : "wm-statPrgid-wm.Variable-1511582528607",
+    "name" : "statPrgid",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "MK1100W99",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statPrgName" : {
+    "_id" : "wm-statPrgName-wm.Variable-1511582556710",
+    "name" : "statPrgName",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "Makeup Audit",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "svProcMK1100PK0_GetMkupAudit" : {
+    "_id" : "wm-svProcMK1100PK0_GetMkupAudit-wm.ServiceVariable-1511587308720",
+    "name" : "svProcMK1100PK0_GetMkupAudit",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.formFilter.formWidgets.pOrdnum.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pDyejob",
+      "value" : "bind:Widgets.formFilter.formWidgets.pDyejob.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pOpdateFrom",
+      "value" : "bind:Widgets.formFilter.formWidgets.pOpdateFrom.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pOpdateTo",
+      "value" : "bind:Widgets.formFilter.formWidgets.pOpdateTo.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcMk1100pk0GetMkupAuditResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcMK1100PK0_GetMkupAudit",
+    "operationId" : "ProcedureExecutionController_executeProcMK1100PK0_GetMkupAudit",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svProcMK1100PK0_GetMkupAuditonBeforeUpdate($event, $scope)",
+    "onError" : "svProcMK1100PK0_GetMkupAuditonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  }
+}

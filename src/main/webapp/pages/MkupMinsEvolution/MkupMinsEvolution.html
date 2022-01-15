@@ -1,0 +1,186 @@
+<wm-page data-ng-controller="MkupMinsEvolutionPageController" pagetitle="Mkup Mins Evolution" name="page1">
+    <wm-header content="header" name="header1">
+        <wm-param name="pTitle" value="bind:Variables.statPrgName.dataSet.dataValue" type="string"></wm-param>
+    </wm-header>
+    <wm-top-nav name="top_nav1" content="MakeUpMainMenu"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="get" captionalign="left" name="formFilter" width="700" postmessage="" validationtype="none">
+                <wm-layoutgrid columns="1" name="layoutgrid1" width="700">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn1">
+                            <wm-form-field on-change="pOrdnumChange($event, $scope, newVal, oldVal)" name="pOrdnum" readonly="false" displayname="Order No" key="pOrdnum" type="string" show="true" widget="text" maxchars="12" inputtype="text" placeholder="Enter value"
+                                defaultvalue="bind:pageParams.pParam1"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn4">
+                            <wm-form-field name="pMaklcn" readonly="false" displayname="Unit" key="pMaklcn" type="string" show="true" widget="select" maxchars="6" placeholder="Enter value" dataset="bind:Variables.svGetMakeupUnit.dataSet.poutMakeup" datafield="lcncod"
+                                displayfield="lcncod"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn5">
+                            <wm-form-field name="pProddate" readonly="false" displayname="Production Date" key="pProddate" type="string" show="true" widget="date" datepattern="dd-MMM-yyyy" placeholder="Select date"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn6">
+                            <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup1" padding="20px unset unset unset">
+                                <wm-button caption="Query" type="submit" class="btn-primary" name="btnQuery" on-click="btnQueryClick($event, $scope)"></wm-button>
+                                <wm-button caption="Reset" type="reset" class="btn-secondary" name="btnReset" on-click="btnResetClick($event, $scope)"></wm-button>
+                            </wm-buttongroup>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-form>
+            <wm-table pagesize="10" showrecordcount="true" title="" dataset="bind:Variables.svProcMK1100PK0_QryMK721Prodmins.dataSet.poutProdmins" navigation="Classic" name="gridProdEvltn" gridfirstrowselect="true" spacing="condensed">
+                <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="100px" caption="Order" binding="ordnum"></wm-table-column>
+                <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="120px" caption="Client" binding="clicod"></wm-table-column>
+                <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="50px" caption="Gmt" binding="gmtseq"></wm-table-column>
+                <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="80px" caption="Desc" binding="gmtdes"></wm-table-column>
+                <wm-table-column-group caption="Location" name="group1">
+                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="60px" caption="Unit" binding="maklcn"></wm-table-column>
+                    <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="60px" caption="Sub Lcn" binding="sublcncod"></wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column readonly="false" show="true" formatpattern="toDate" datepattern="dd-MMM-yyyy" type="datetime" edit-widget-type="datetime" width="100px" caption="Date" binding="proddate"></wm-table-column>
+                <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="50px" caption="Line" binding="mkline"></wm-table-column>
+                <wm-table-column readonly="false" show="true" type="integer" edit-widget-type="number" textalignment="right" width="50px" caption="Num Oper" binding="numoper"></wm-table-column>
+                <wm-table-column readonly="false" show="true" formatpattern="toDate" datepattern="HH:mm" type="datetime" edit-widget-type="datetime" width="50px" caption="Start</br>Time" binding="starttime"></wm-table-column>
+                <wm-table-column readonly="false" show="true" formatpattern="toDate" datepattern="HH:mm" type="datetime" edit-widget-type="datetime" width="50px" caption="End</br>Time" binding="endtime"></wm-table-column>
+                <wm-table-column readonly="false" show="true" type="integer" edit-widget-type="number" textalignment="right" width="80px" widget-type="label" caption="Eff Work</br>Mins" binding="effwrkmin">
+                    <wm-label caption="{{row.getProperty('effwrkmin').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                </wm-table-column>
+                <wm-table-column readonly="false" show="true" type="float" edit-widget-type="number" textalignment="right" width="50px" widget-type="label" caption="HD</br>TSM" binding="prepmin">
+                    <wm-label caption="{{row.getProperty('prepmin').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                </wm-table-column>
+                <wm-table-column readonly="false" show="true" type="float" edit-widget-type="number" textalignment="right" width="50px" widget-type="label" caption="Oper</br>TSM" binding="tarsewmin">
+                    <wm-label caption="{{row.getProperty('tarsewmin').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                </wm-table-column>
+                <wm-table-column-group caption="C o m p l e x i t y" name="group">
+                    <wm-table-column readonly="false" show="true" type="long" edit-widget-type="number" textalignment="right" width="50px" widget-type="label" caption="Prep</br>Mins" binding="pddminPrep">
+                        <wm-label caption="{{row.getProperty('pddminPrep').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                    <wm-table-column readonly="false" show="true" type="float" edit-widget-type="number" textalignment="right" width="50px" widget-type="label" caption="ESM" binding="stdmin">
+                        <wm-label caption="{{row.getProperty('stdmin').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                    <wm-table-column readonly="false" show="true" type="float" edit-widget-type="number" textalignment="right" width="50px" widget-type="label" caption="TSM" binding="pddmin">
+                        <wm-label caption="{{row.getProperty('pddmin').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column-group caption="Pcs" name="group2">
+                    <wm-table-column readonly="false" show="true" type="integer" edit-widget-type="number" textalignment="right" width="80px" widget-type="label" caption="Target" binding="targetqty">
+                        <wm-label caption="{{row.getProperty('targetqty').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                    <wm-table-column readonly="false" show="true" type="integer" edit-widget-type="number" textalignment="right" width="80px" widget-type="label" caption="Mak" binding="prodqty">
+                        <wm-label caption="{{row.getProperty('prodqty').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column readonly="false" show="true" type="double" edit-widget-type="number" textalignment="right" width="100px" widget-type="label" caption="Total</br>Oper Mins" binding="wtotmins">
+                    <wm-label caption="{{row.getProperty('wtotmins').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                </wm-table-column>
+                <wm-table-column readonly="false" show="true" type="double" edit-widget-type="number" textalignment="right" width="80px" widget-type="label" caption="Oper</br>Act Mins" binding="wactmins">
+                    <wm-label caption="{{row.getProperty('wactmins').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                </wm-table-column>
+                <wm-table-column readonly="false" show="true" type="double" edit-widget-type="number" textalignment="right" width="80px" widget-type="label" caption="HD</br>Act Mins" binding="whdActmins">
+                    <wm-label caption="{{row.getProperty('whdActmins').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                </wm-table-column>
+                <wm-table-column readonly="false" show="true" type="double" edit-widget-type="number" textalignment="right" width="80px" widget-type="label" caption="Tot</br>Act Mins" binding="wtotactmins">
+                    <wm-label caption="{{row.getProperty('wtotactmins').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                </wm-table-column>
+                <wm-table-column readonly="false" show="true" type="integer" edit-widget-type="number" width="50px" caption="%Eff" binding="effpercent"></wm-table-column>
+            </wm-table>
+            <wm-layoutgrid name="layoutgrid4">
+                <wm-gridrow name="gridrow11_1">
+                    <wm-gridcolumn padding="unset 0.5px unset unset" name="gridcolumn20_1" columnwidth="5">
+                        <wm-layoutgrid name="layoutgrid7">
+                            <wm-gridrow padding="0.5px unset unset unset" name="gridrow12">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn25">
+                                    <wm-label padding="unset 0.5em" name="label30" class="col-md-2 control-label displayPromptdisplayPrompt" textalign="right" margin="unset 5px unset unset" caption="Client Name"></wm-label>
+                                    <wm-label padding="unset 0.5em" name="label33" caption="bind:Widgets.gridProdEvltn.selecteditem.clinam" class="displayField"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow13">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn27" padding="unset unset 10px unset">
+                                    <wm-label padding="unset 0.5em" name="label31" class="col-md-2 control-label displayPrompt" textalign="right" margin="unset 5px unset unset" caption="Style"></wm-label>
+                                    <wm-textarea name="textarea1" width="300" placeholder="bind:Widgets.gridProdEvltn.selecteditem.wstyle" readonly="true"></wm-textarea>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow14">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn29">
+                                    <wm-label padding="unset 0.5em" name="label32" class="col-md-2 control-label" textalign="right" margin="unset 5px unset unset" caption="Mak Remarks"></wm-label>
+                                    <wm-textarea name="textarea2" width="300" placeholder="bind:Widgets.gridProdEvltn.selecteditem.remarks" readonly="true"></wm-textarea>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn21_1" columnwidth="7">
+                        <wm-layoutgrid class="bordered" name="layoutgrid6">
+                            <wm-gridrow padding="0.5px unset unset unset" name="gridrow13_1">
+                                <wm-gridcolumn name="gridcolumn25_1" columnwidth="12">
+                                    <wm-label padding="0.5px unset unset 0.5px" class="text-info control-label" caption="bind:&quot;Summary for Order &quot; + Widgets.gridProdEvltn.selecteditem.ordnum" fontunit="em" name="label9"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow padding="0.5px unset unset unset" name="gridrow6">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn13">
+                                    <wm-label caption="Total Mins *" class="col-md-3 control-label" fontunit="px" name="label12" width="170" textalign="right"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn14">
+                                    <wm-label padding="unset 0.5em" name="label13" class="col-md-8 control-label" caption="%Eff" width="210" textalign="right"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow7">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn15">
+                                    <wm-label padding="unset 0.5em" name="label14" class="col-md-3 control-label" caption="Minimum" width="80" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label22" class="displayField" width="100" caption="bind:Widgets.gridProdEvltn.selecteditem.minoperactmins.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn16">
+                                    <wm-container name="container1">
+                                        <wm-label width="120" padding="unset 0.5em" name="label18" class="col-md-5 control-label" caption="representing max" margin="unset 5px unset unset" textalign="left"></wm-label>
+                                        <wm-label textalign="right" padding="unset 0.5em" name="label26" class="displayField" width="100" caption="bind:Widgets.gridProdEvltn.selecteditem.maxeff.toLocaleString()"></wm-label>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow8">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn17">
+                                    <wm-label padding="unset 0.5em" name="label15" class="col-md-3 control-label" caption="Average" width="80" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label23" class="displayField" width="100" caption="bind:Widgets.gridProdEvltn.selecteditem.avgoperactmins.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn18">
+                                    <wm-container name="container2">
+                                        <wm-label width="120" padding="unset 0.5em" name="label19" class="col-md-5 control-label" caption="representing avg" margin="unset 5px unset unset" textalign="left"></wm-label>
+                                        <wm-label textalign="right" padding="unset 0.5em" name="label27" class="displayField" width="100" caption="bind:Widgets.gridProdEvltn.selecteditem.avgeff.toLocaleString()"></wm-label>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow9">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn19">
+                                    <wm-label padding="unset 0.5em" name="label16" class="col-md-3 control-label" caption="Maximum" width="80" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label24" class="displayField" width="100" caption="bind:Widgets.gridProdEvltn.selecteditem.maxoperactmins.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn20">
+                                    <wm-container name="container3">
+                                        <wm-label width="120" padding="unset 0.5em" name="label20" class="col-md-5 control-label" caption="representing min" margin="unset 5px unset unset" textalign="left"></wm-label>
+                                        <wm-label textalign="right" padding="unset 0.5em" name="label28" class="displayField" width="100" caption="bind:Widgets.gridProdEvltn.selecteditem.mineff.toLocaleString()"></wm-label>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow10">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn21">
+                                    <wm-label padding="unset 0.5em" name="label17" class="col-md-3 control-label" caption="Total Pcs" width="80" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label25" class="displayField" width="100" caption="bind:Widgets.gridProdEvltn.selecteditem.sumpcs.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="8" name="gridcolumn22"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow11">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn24">
+                                    <wm-label fontstyle="italic" padding="1em 0.5em unset 0.5em" name="label29" class="col-md-12 control-label" textalign="left" caption="Total Mins *  =  Oper Act Min + HD Act Min"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow12_1"></wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-view class="dialog-view" name="view1">
+        <wm-alertdialog name="notificationalertdialog" controller="NotificationDialogController" notificationdialog="alert" message="{{notification.text}}" title="{{notification.title}}" oktext="{{notification.okButtonText}}" alerttype="{{notification.alerttype}}"
+            on-ok="variableOnOk()" on-close="variableOnClose()"></wm-alertdialog>
+    </wm-view>
+</wm-page>

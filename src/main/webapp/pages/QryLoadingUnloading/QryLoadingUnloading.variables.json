@@ -1,0 +1,277 @@
+{
+  "notifMsg" : {
+    "_id" : "wm-notifMsg-wm.NotificationVariable-1510976520926",
+    "name" : "notifMsg",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "title",
+      "value" : "bind:Variables.statPrgName.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "alerttype",
+      "value" : "error",
+      "type" : "string"
+    } ],
+    "operation" : "alert"
+  },
+  "statPrgid" : {
+    "_id" : "wm-statPrgid-wm.Variable-1510974127973",
+    "name" : "statPrgid",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "MK1100W10",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statPrgName" : {
+    "_id" : "wm-statPrgName-wm.Variable-1510974151903",
+    "name" : "statPrgName",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "Loading and Unloading Figures",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "svProcMK1100PK0_GetGmtColourDetails" : {
+    "_id" : "wm-svProcMK1100PK0_GetGmtColourDetails-wm.ServiceVariable-1510975102837",
+    "name" : "svProcMK1100PK0_GetGmtColourDetails",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.formFilter.formWidgets.pOrdnum.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pGmtseq",
+      "value" : "bind:Widgets.formFilter.formWidgets.pGmtseq.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pClrseqg",
+      "value" : "bind:Widgets.formFilter.formWidgets.pClrseqg.datavalue",
+      "type" : "integer"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcMk1100pk0GetGmtColourDetailsResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcMK1100PK0_GetGmtColourDetails",
+    "operationId" : "ProcedureExecutionController_executeProcMK1100PK0_GetGmtColourDetails",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svProcMK1100PK0_GetOrt150Size" : {
+    "_id" : "wm-svProcMK1100PK0_GetOrt150Size-wm.ServiceVariable-1511234597672",
+    "name" : "svProcMK1100PK0_GetOrt150Size",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.gridMaster.selecteditem.ordnum",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcMk1100pk0GetOrt150sizeResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcMK1100PK0_GetOrt150Size",
+    "operationId" : "ProcedureExecutionController_executeProcMK1100PK0_GetOrt150Size",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svProcMK1100PK0_GetOrt150SizeonBeforeUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svProcMK1100PK0_MK400JobLoadpersze" : {
+    "_id" : "wm-svProcMK1100PK0_MK400JobLoadpersze-wm.ServiceVariable-1511168270569",
+    "name" : "svProcMK1100PK0_MK400JobLoadpersze",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.gridMaster.selecteditem.ordnum",
+      "type" : "string"
+    }, {
+      "target" : "pGmtseq",
+      "value" : "bind:Widgets.gridMaster.selecteditem.gmtseq",
+      "type" : "string"
+    }, {
+      "target" : "pClrseqg",
+      "value" : "bind:Widgets.gridMaster.selecteditem.clrseq",
+      "type" : "integer"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcMk1100pk0Mk400jobLoadperszeResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcMK1100PK0_MK400JobLoadpersze",
+    "operationId" : "ProcedureExecutionController_executeProcMK1100PK0_MK400JobLoadpersze",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svProcMK1100PK0_MK400JobLoadperszeonBeforeUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svProcMK1100PK0_MK440GetordLoadunldqty" : {
+    "_id" : "wm-svProcMK1100PK0_MK440GetordLoadunldqty-wm.ServiceVariable-1510987414029",
+    "name" : "svProcMK1100PK0_MK440GetordLoadunldqty",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.gridMaster.selecteditem.ordnum",
+      "type" : "string"
+    }, {
+      "target" : "pGmtseq",
+      "value" : "bind:Widgets.gridMaster.selecteditem.gmtseq",
+      "type" : "string"
+    }, {
+      "target" : "pClrseqg",
+      "value" : "bind:Widgets.gridMaster.selecteditem.clrseq",
+      "type" : "integer"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcMk1100pk0Mk440getordLoadunldqtyResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcMK1100PK0_MK440GetordLoadunldqty",
+    "operationId" : "ProcedureExecutionController_executeProcMK1100PK0_MK440GetordLoadunldqty",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svProcMK1100PK0_MK440GetordLoadunldqtyonBeforeUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svProcMK1100PK0_MK450JobUnloadpersze" : {
+    "_id" : "wm-svProcMK1100PK0_MK450JobUnloadpersze-wm.ServiceVariable-1511254914040",
+    "name" : "svProcMK1100PK0_MK450JobUnloadpersze",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.gridMaster.selecteditem.ordnum",
+      "type" : "string"
+    }, {
+      "target" : "pGmtseq",
+      "value" : "bind:Widgets.gridMaster.selecteditem.gmtseq",
+      "type" : "string"
+    }, {
+      "target" : "pClrseqg",
+      "value" : "bind:Widgets.gridMaster.selecteditem.clrseq",
+      "type" : "integer"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcMk1100pk0Mk450jobUnloadperszeResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcMK1100PK0_MK450JobUnloadpersze",
+    "operationId" : "ProcedureExecutionController_executeProcMK1100PK0_MK450JobUnloadpersze",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svProcMK1100PK0_MK450JobUnloadperszeonBeforeUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svProcMK1100PK0_MK560QryMkrejects" : {
+    "_id" : "wm-svProcMK1100PK0_MK560QryMkrejects-wm.ServiceVariable-1511347912390",
+    "name" : "svProcMK1100PK0_MK560QryMkrejects",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.gridMaster.selecteditem.ordnum",
+      "type" : "string"
+    }, {
+      "target" : "pGmtseq",
+      "value" : "bind:Widgets.gridMaster.selecteditem.gmtseq",
+      "type" : "string"
+    }, {
+      "target" : "pClrseqg",
+      "value" : "bind:Widgets.gridMaster.selecteditem.clrseq",
+      "type" : "integer"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcMk1100pk0Mk560qryMkrejectsResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcMK1100PK0_MK560QryMkrejects",
+    "operationId" : "ProcedureExecutionController_executeProcMK1100PK0_MK560QryMkrejects",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svProcMK1100PK0_MK560QryMkrejectsonBeforeUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  }
+}

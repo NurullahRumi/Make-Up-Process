@@ -1,0 +1,297 @@
+{
+  "notifMsg" : {
+    "_id" : "wm-notifMsg-wm.NotificationVariable-1511678985727",
+    "name" : "notifMsg",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "title",
+      "value" : "bind:Variables.statPrgName.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "alerttype",
+      "value" : "error",
+      "type" : "string"
+    } ],
+    "operation" : "alert"
+  },
+  "statPageTitle" : {
+    "_id" : "wm-statPageTitle-wm.Variable-1525064331695",
+    "name" : "statPageTitle",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "bind:(pageParams.pParam1.length==0)?Variables.statPrgName.dataSet.dataValue:Variables.statPrgName.dataSet.dataValue + \"-\" + pageParams.pParam1",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statPrgid" : {
+    "_id" : "wm-statPrgid-wm.Variable-1511670159840",
+    "name" : "statPrgid",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "MK1100W57",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statPrgName" : {
+    "_id" : "wm-statPrgName-wm.Variable-1511670225574",
+    "name" : "statPrgName",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "View Production Details",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "svGetOrdGmtRoutingProgUrl" : {
+    "_id" : "wm-svGetOrdGmtRoutingProgUrl-wm.ServiceVariable-1521459388069",
+    "name" : "svGetOrdGmtRoutingProgUrl",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOtherParams",
+      "value" : "bind:\"p_ordnum=\"+Widgets.lblOrder.caption",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.query.QrySy9200pk0getOrdRoutingUrlResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQrySy9200pk0GetOrdRoutingUrl",
+    "operationId" : "QueryExecutionController_executeQrySy9200pk0GetOrdRoutingUrl",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 1,
+    "onSuccess" : "svGetOrdGmtRoutingProgUrlonSuccess($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "svMK1100PK0OrderDocsUrl" : {
+    "_id" : "wm-svMK1100PK0OrderDocsUrl-wm.ServiceVariable-1524824002609",
+    "name" : "svMK1100PK0OrderDocsUrl",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.lblOrder.caption",
+      "type" : "string"
+    }, {
+      "target" : "pDsheetno",
+      "value" : "bind:Widgets.lblDsheetno.caption",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Mk1100pk0getOrderDocsUrlResponse",
+    "service" : "pfsdb",
+    "operation" : "executeMk1100pk0GetOrderDocsUrl",
+    "operationId" : "ProcedureExecutionController_executeMk1100pk0GetOrderDocsUrl",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svMK1100PK0OrderDocsUrlonBeforeUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOR003pk0HighProfileAccess" : {
+    "_id" : "wm-svOR003pk0HighProfileAccess-wm.ServiceVariable-1524048618184",
+    "name" : "svOR003pk0HighProfileAccess",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.query.QryCanViewOrdStakeResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQryCanViewOrdStake",
+    "operationId" : "QueryExecutionController_executeQryCanViewOrdStake",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "svProcMK1100PK0_MK570GetOrdDetails" : {
+    "_id" : "wm-svProcMK1100PK0_MK570GetOrdDetails-wm.ServiceVariable-1511672180798",
+    "name" : "svProcMK1100PK0_MK570GetOrdDetails",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.formFilter.formWidgets.pOrdnum.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcMk1100pk0Mk570getOrdDetailsResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcMK1100PK0_MK570GetOrdDetails",
+    "operationId" : "ProcedureExecutionController_executeProcMK1100PK0_MK570GetOrdDetails",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svProcMK1100PK0_MK570GetProdDetails" : {
+    "_id" : "wm-svProcMK1100PK0_MK570GetProdDetails-wm.ServiceVariable-1511686694962",
+    "name" : "svProcMK1100PK0_MK570GetProdDetails",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pUsrid",
+      "value" : "bind:Variables.statAppUsrid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.lblOrder.caption",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcMk1100pk0Mk570getProdDetailsResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcMK1100PK0_MK570GetProdDetails",
+    "operationId" : "ProcedureExecutionController_executeProcMK1100PK0_MK570GetProdDetails",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svProcMK1100PK0_MK570GetProdDetailsonBeforeUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svSR2680PK0CheckBefDwnldPattern" : {
+    "_id" : "wm-svSR2680PK0CheckBefDwnldPattern-wm.ServiceVariable-1525241213536",
+    "name" : "svSR2680PK0CheckBefDwnldPattern",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Sr2680pk0checkBeforeDwnldPatternResponse",
+    "service" : "pfsdb",
+    "operation" : "executeSR2680PK0CheckBeforeDwnldPattern",
+    "operationId" : "ProcedureExecutionController_executeSR2680PK0CheckBeforeDwnldPattern",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "svSR2680PK0CheckBefDwnldPatternonSuccess($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svSY006pk0CallRepUrl" : {
+    "_id" : "wm-svSY006pk0CallRepUrl-wm.ServiceVariable-1524120071727",
+    "name" : "svSY006pk0CallRepUrl",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.QrySy006pk0callRepUrlResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQrySY006pk0CallRepUrl",
+    "operationId" : "ProcedureExecutionController_executeQrySY006pk0CallRepUrl",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "svSY006pk0CallRepUrlonSuccess($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svSY2110pk0GetCroquisPath" : {
+    "_id" : "wm-svSY2110pk0GetCroquisPath-wm.ServiceVariable-1524828901508",
+    "name" : "svSY2110pk0GetCroquisPath",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.lblOrder.caption",
+      "type" : "string"
+    }, {
+      "target" : "pDsheetno",
+      "value" : "bind:Widgets.lblDsheetno.caption",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Sy2110pk0getCroquisPathResponse",
+    "service" : "pfsdb",
+    "operation" : "executeSY2110PK0GetCroquisPath",
+    "operationId" : "ProcedureExecutionController_executeSY2110PK0GetCroquisPath",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svSY2110pk0GetCroquisPathonBeforeUpdate($event, $scope)",
+    "onSuccess" : "svSY2110pk0GetCroquisPathonSuccess($event, $scope)",
+    "onError" : "svSY2110pk0GetCroquisPathonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  }
+}

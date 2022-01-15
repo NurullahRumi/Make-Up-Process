@@ -1,0 +1,122 @@
+{
+  "qryCanViewOrdStake" : {
+    "name" : "qryCanViewOrdStake",
+    "description" : "user can view order stake",
+    "version" : "V2",
+    "queryString" : "select or003pk0.sfunc_high_profile_access(upper(:pUsrid), null, null) canViewOrdStake\nfrom dual",
+    "countQueryString" : "select count(*) from (select or003pk0.sfunc_high_profile_access(upper(:pUsrid), null, null) canViewOrdStake\nfrom dual) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QryCanViewOrdStakeResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "CANVIEWORDSTAKE",
+        "fieldName" : "canviewordstake",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qrySy9200pk0CallOR210" : {
+    "name" : "qrySy9200pk0CallOR210",
+    "description" : "call or210oc0",
+    "version" : "V2",
+    "queryString" : "select sy9200pk0.sproc_call_fmbpath('/prod/pfs/or/frm/or210oc0.fmx', :pOtherParams) progurl\nfrom dual",
+    "countQueryString" : "select count(*) from (select sy9200pk0.sproc_call_fmbpath('/prod/pfs/or/frm/or210oc0.fmx', :pOtherParams) progurl\nfrom dual) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pOtherParams",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "p_ordnum=",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QrySy9200pk0callOr210Response",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "PROGURL",
+        "fieldName" : "progurl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qrySy9200pk0GetOrdRoutingUrl" : {
+    "name" : "qrySy9200pk0GetOrdRoutingUrl",
+    "description" : "get form URL or210oc0",
+    "version" : "V2",
+    "queryString" : "select sy9200pk0.sproc_call_fmbpath('/prod/pfs/or/frm/or210oc0.fmx', :pOtherParams) progurl\nfrom dual",
+    "countQueryString" : "select count(*) from (select sy9200pk0.sproc_call_fmbpath('/prod/pfs/or/frm/or210oc0.fmx', :pOtherParams) progurl\nfrom dual) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pOtherParams",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "g",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QrySy9200pk0getOrdRoutingUrlResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "PROGURL",
+        "fieldName" : "progurl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  }
+}

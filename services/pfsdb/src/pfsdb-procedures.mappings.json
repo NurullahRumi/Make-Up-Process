@@ -1,0 +1,1027 @@
+{
+  "TT640pk0_getMakeupUnit" : {
+    "procedureString" : "CALL tt640pk0.sproc_get_MakeUp(?)",
+    "parameters" : [ {
+      "name" : "poutMakeup",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "SY2110PK0GetCroquisPath" : {
+    "procedureString" : "CALL SY2110pk0.sproc_call_croquisWM(?,?,?,?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1700036A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutCroqpath",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "poutWarningmsg",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pDsheetno",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1700036A",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "procMK1100PK0_MK440GetordLoadunldqty" : {
+    "procedureString" : "CALL MK1100PK0.sproc_mk440_getord_loadunldqty(upper(?), ?, ?,?,  ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "T",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "103459G",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pGmtseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClrseqg",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutOrdLdUnloadQty",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "mk1100pk0GetMenuItems" : {
+    "procedureString" : "CALL mk1100pk0.sproc_mk570_getMenuItems(upper(?),?,?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1700036A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutMenuItems",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pMenuModule",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CUPROD",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "procMK1100PK0_GetGmtColourDetails" : {
+    "procedureString" : "CALL MK1100PK0.sproc_get_GmtColourDetails(upper(?) , ?, ?, ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "T",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "103459G",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pGmtseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClrseqg",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutGmtclrList",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "procMK1100PK0_MK440GetjobLoadunldqty" : {
+    "procedureString" : "CALL MK1100PK0.sproc_mk440_getjob_loadunldqty( upper(?), ?, ?, ?, ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "T",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "103459G",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pGmtseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClrseqg",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSzeseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "5",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutJobLdUnloadQty",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "qrySY006pk0CallRepUrl" : {
+    "procedureString" : "CALL sy006pk0_repurl.sproc_callurl(?,?,?,?,?, '', '','wavemaker')",
+    "parameters" : [ {
+      "name" : "pReportPath",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "/prod/pfs/cu/rep/cu175rp1.rdf",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pParams",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "p_ordnum=",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutUrl",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pDesformat",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "EXCEL",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pParamForm",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "PARAMFORM",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "procMK1100PK0_MK570GetOrdDetails" : {
+    "procedureString" : "CALL MK1100PK0.sproc_mk570_getOrdDetails(upper(?), ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "T",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1702581A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutOrdDet",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "procMK1100PK0_MK570GetProdDetails" : {
+    "procedureString" : "CALL MK1100PK0.sproc_mk570_getProdDetails(upper(?), ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "T",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1702581A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutProdDet",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "mk1100pk0GetOrderDocsUrl" : {
+    "procedureString" : "CALL mk1100pk0.sproc_mk570_getOrderDocsUrl(upper(?),?, ?, ?,?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MK1100W07",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1700036A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pDsheetno",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1700036A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutOrderDocsUrl",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "procMK1100PK0_GetOrt150Size" : {
+    "procedureString" : "CALL MK1100PK0.sproc_get_ort150_size(upper(?), ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00026",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "T",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "103459G",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutSizes",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "procMK1100PK0_MK450JobUnloadpersze" : {
+    "procedureString" : "CALL MK1100PK0.sproc_mk450_job_unloadpersze(upper(?), ?, ?, ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "T",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "103459G",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pGmtseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClrseqg",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutJobSzeUnLoadQty",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "procMK1100PK0_QryMK721Prodmins" : {
+    "procedureString" : "CALL MK1100PK0.sproc_qry_mk721_prodmins( upper(?), ?, ?, ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MK1100W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "F40426G",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pMaklcn",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "BG1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pProddate",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2015-03-10",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutProdmins",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "SR2675PK0GetOrderPattern" : {
+    "procedureString" : "CALL sr2675pk0.sproc_get_orderpattern(?, ?, ?, ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1700036A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutFilename",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "cc",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutMessage",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "c",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutPatternfile",
+      "type" : "blob",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MK1100W57",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pGmtseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "procMK103PK0ORDQRY_GetOrdcomment" : {
+    "procedureString" : "CALL  MK103PK0_QRYORD.sproc_get_ordcomments(?, upper(?), ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "xxxx",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D009",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "F71133A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutCommentsList",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "procMK1100PK0_MK400JobLoadpersze" : {
+    "procedureString" : "CALL MK1100PK0.sproc_mk400_job_loadpersze(upper(?), ?, ?, ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "T",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "103459G",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pGmtseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClrseqg",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutJobSzeLoadQty",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "SR2680PK0CheckBeforeDwnldPattern" : {
+    "procedureString" : "CALL sr2680pk0.sproc_chkbef_dwnloadordpattern(?, ?,upper(?), ?,\n                                           ?,\n                                           ?,\n                                           ?,\n                                           ?,\n                                           ?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1600011A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pGmtseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MK1100W57",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutLectracode",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "poutVersionno",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "poutGmtseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "poutPattypecode",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "poutFilename",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "procMK103PK0QRYORD_GetOrdgmtImage" : {
+    "procedureString" : "CALL MK103PK0_QRYORD.sproc_get_ordgmtimage(?, upper(?), ?, ?,\n                    ?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "MK110WB",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d0099",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1700010A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pGmtseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutImage",
+      "type" : "blob",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "procMK1100PK0_GetMkupAudit" : {
+    "procedureString" : "CALL MK1100PK0.sproc_get_mkupaudit(upper(?), ?, ?, ?, ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "T",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1300102A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pDyejob",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "001972833",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOpdateFrom",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2013-02-06",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOpdateTo",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2013-02-07",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutAudit",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "procMK1100PK0_MK560QryMkrejects" : {
+    "procedureString" : "CALL MK1100PK0.sproc_mk560_qry_mkrejects(upper(?), ?, ?, ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "T",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "103459G",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pGmtseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClrseqg",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutMkRejects",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  }
+}

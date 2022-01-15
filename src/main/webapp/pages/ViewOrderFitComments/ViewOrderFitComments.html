@@ -1,0 +1,27 @@
+<wm-page data-ng-controller="ViewOrderFitCommentsPageController" pagetitle="View Order Fit Comments" name="page1"> 
+    <wm-header content="header" name="header1"> 
+        <wm-param name="pTitle" value="bind:Variables.statPrgName.dataSet.dataValue" type="string"></wm-param> 
+    </wm-header> 
+    <wm-content name="content1"> 
+        <wm-page-content columnwidth="12" name="page_content1"> 
+            <wm-layoutgrid name="layoutgrid1"> 
+                <wm-gridrow name="gridrow1"> 
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn1"> 
+                        <wm-label padding="unset 0.5em" name="label1" caption="Order" class="displayPrompt"></wm-label> 
+                        <wm-label padding="unset 0.5em" name="lblOrder" caption="bind:pageParams.pOrdnum" class="displayField"></wm-label> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn2"></wm-gridcolumn> 
+                </wm-gridrow> 
+                <wm-gridrow name="gridrow2"> 
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3"> 
+                        <wm-table title="" dataset="bind:Variables.svGetOrderComments.dataSet.poutCommentsList" navigation="None" name="table1"> 
+                            <wm-table-column binding="requestno" caption="Request No" width="150px" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+                            <wm-table-column binding="comments" caption="Comments" width="70%" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+                            <wm-table-column binding="inputdate" caption="Date" edit-widget-type="datetime" type="datetime" datepattern="dd-MMM-yyyy" formatpattern="toDate" show="true" readonly="false"></wm-table-column> 
+                        </wm-table> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+            </wm-layoutgrid> 
+        </wm-page-content> 
+    </wm-content> 
+</wm-page>

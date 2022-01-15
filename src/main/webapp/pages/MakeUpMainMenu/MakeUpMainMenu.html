@@ -1,0 +1,28 @@
+<wm-partial name="partial1" data-ng-controller="MakeUpMainMenuPageController" type="topnav"> 
+    <wm-navbar name="navbar1"> 
+        <wm-nav name="nav1" type="navbar" class="navbar-left"> 
+            <wm-nav-item name="nav_item1"> 
+                <wm-anchor name="anchor1" caption="Home" iconclass="glyphicon glyphicon-home" on-click="Variables.goToPage_Main.invoke()"></wm-anchor> 
+            </wm-nav-item> 
+            <wm-nav-item name="nav_item11"> 
+                <wm-menu itemlink="wmitempath" linktarget="_self" orderby="itemseq:asc" itemlabel="progname" dataset="bind:Variables.srvGetCuttingMenu.dataSet.poutMenuItems" width="260" menuclass="btn-transparent" menulayout="vertical" iconclass="" name="menu2" caption="Cutting Details" autoclose="always"></wm-menu> 
+            </wm-nav-item> 
+            <wm-nav-item name="nav_item2"> 
+                <wm-anchor on-click="Actions.goToPage_ViewProductionDetails.invoke()" name="anchorViewMKProd" caption="View Production Details" iconclass=""></wm-anchor> 
+            </wm-nav-item> 
+            <wm-nav-item name="nav_item3"></wm-nav-item> 
+            <wm-nav-item name="nav_item9"> 
+                <wm-menu menulayout="vertical" itemaction="Action" itemlabel="progname" dataset="bind:Variables.statMenuEfficiency.dataSet" width="200" menuclass="btn-transparent" iconclass="" name="menuEff" caption="Makeup Efficiency" autoclose="outsideClick"></wm-menu> 
+            </wm-nav-item> 
+            <wm-nav-item name="nav_item7"> 
+                <wm-anchor on-click="Actions.goToPage_MakeupAudit.invoke()" caption="Makeup Audit" iconclass="" name="anchorMKAudit"></wm-anchor> 
+            </wm-nav-item> 
+        </wm-nav> 
+        <wm-nav name="nav2" type="navbar" class="navbar-right"> 
+            <wm-nav-item name="nav_item4"> 
+                <wm-anchor name="anchor3" caption="Help" iconclass="glyphicon glyphicon-question-sign"></wm-anchor> 
+            </wm-nav-item> 
+            <wm-nav-item name="nav_item5"></wm-nav-item> 
+        </wm-nav> 
+    </wm-navbar> 
+</wm-partial>

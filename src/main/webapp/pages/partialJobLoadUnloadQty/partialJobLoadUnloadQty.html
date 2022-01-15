@@ -1,0 +1,39 @@
+<wm-partial data-ng-controller="partialJobLoadUnloadQtyPageController" name="partial1"> 
+    <wm-table pagesize="15" showrecordcount="true" spacing="condensed" title="" dataset="bind:Variables.svProcMK1100PK0_MK440GetjobLoadunldqty.dataSet.poutJobLdUnloadQty" navigation="Classic" name="grid1"> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="80px" caption="Dyejob" binding="dyejob"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="60px" caption="Make up unit" binding="makeupunit"></wm-table-column> 
+        <wm-table-column-group col-class="cyan" caption="L O A D I N G" name="group"> 
+            <wm-table-column readonly="false" show="true" type="long" edit-widget-type="number" textalignment="right" width="60px" widget-type="label" caption="Good" binding="loadGoodqty"> 
+                <wm-label caption="{{row.getProperty('loadGoodqty').toLocaleString()}}" class="" data-ng-class=""></wm-label> 
+            </wm-table-column> 
+            <wm-table-column readonly="false" show="true" type="long" edit-widget-type="number" textalignment="right" width="60px" widget-type="label" caption="Blue" binding="loadBlueqty"> 
+                <wm-label caption="{{row.getProperty('loadBlueqty').toLocaleString()}}" class="" data-ng-class=""></wm-label> 
+            </wm-table-column> 
+            <wm-table-column readonly="false" show="true" type="long" edit-widget-type="number" textalignment="right" width="60px" widget-type="label" caption="Red" binding="loadRedqty"> 
+                <wm-label caption="{{row.getProperty('loadRedqty').toLocaleString()}}" class="" data-ng-class=""></wm-label> 
+            </wm-table-column> 
+        </wm-table-column-group> 
+        <wm-table-column-group col-class="fuschia" caption="U N L O A D I N G" name="group1"> 
+            <wm-table-column readonly="false" show="true" type="long" edit-widget-type="number" textalignment="right" width="60px" widget-type="label" caption="Good" binding="unloadGoodqty"> 
+                <wm-label caption="{{row.getProperty('unloadGoodqty').toLocaleString()}}" class="" data-ng-class=""></wm-label> 
+            </wm-table-column> 
+            <wm-table-column readonly="false" show="true" type="long" edit-widget-type="number" textalignment="right" width="60px" widget-type="label" caption="Blue" binding="unloadBlueqty"> 
+                <wm-label caption="{{row.getProperty('unloadBlueqty').toLocaleString()}}" class="" data-ng-class=""></wm-label> 
+            </wm-table-column> 
+            <wm-table-column readonly="false" show="true" type="long" edit-widget-type="number" textalignment="right" width="60px" widget-type="label" caption="Red" binding="unloadRedqty"> 
+                <wm-label caption="{{row.getProperty('unloadRedqty').toLocaleString()}}" class="" data-ng-class=""></wm-label> 
+            </wm-table-column> 
+        </wm-table-column-group> 
+        <wm-table-column-group col-class="skyblue" caption="D I F F E R E N C E" name="group2"> 
+            <wm-table-column readonly="false" show="true" type="long" edit-widget-type="number" textalignment="right" width="60px" widget-type="label" caption="Good" binding="diffGood"> 
+                <wm-label caption="{{row.getProperty('diffGood').toLocaleString()}}" class="" data-ng-class=""></wm-label> 
+            </wm-table-column> 
+            <wm-table-column readonly="false" show="true" type="long" edit-widget-type="number" textalignment="right" width="60px" widget-type="label" caption="Blue" binding="diffBlue"> 
+                <wm-label caption="{{row.getProperty('diffBlue').toLocaleString()}}" class="" data-ng-class=""></wm-label> 
+            </wm-table-column> 
+            <wm-table-column readonly="false" show="true" type="long" edit-widget-type="number" textalignment="right" width="60px" widget-type="label" caption="Red" binding="diffRed"> 
+                <wm-label caption="{{row.getProperty('diffRed').toLocaleString()}}" class="" data-ng-class=""></wm-label> 
+            </wm-table-column> 
+        </wm-table-column-group> 
+    </wm-table> 
+</wm-partial>

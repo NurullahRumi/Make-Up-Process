@@ -1,0 +1,404 @@
+<wm-page data-ng-controller="ViewProductionDetailsPageController" pagetitle="View Production Details" name="page1">
+    <wm-header content="header" name="header1">
+        <wm-param name="pTitle" value="bind:Variables.statPrgName.dataSet.dataValue" type="string"></wm-param>
+    </wm-header>
+    <wm-top-nav name="top_nav1" content="topnav">
+        <wm-param name="pOrdnum" value="bind:Widgets.lblOrder.caption" type="string"></wm-param>
+    </wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="get" captionalign="left" name="formFilter">
+                <wm-layoutgrid width="50%" columns="1" name="layoutgrid1">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                            <wm-form-field on-change="pOrdnumChange($event, $scope, newVal, oldVal)" readonly="false" name="pOrdnum" displayname="Order No" key="pOrdnum" type="string" show="true" widget="text" defaultvalue="bind:pageParams.pParam1" maxchars="12"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn2">
+                            <wm-buttongroup horizontalalign="left" class="form-action col-md-12" name="buttongroup1">
+                                <wm-button caption="Query" type="submit" class="btn-primary" name="button3" margin="15px unset unset unset" on-click="button3Click($event, $scope)"></wm-button>
+                                <wm-button caption="Reset" type="reset" class="btn-secondary" name="btnReset" margin="15px unset unset unset" on-click="btnResetClick($event, $scope)"></wm-button>
+                            </wm-buttongroup>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-form>
+            <wm-layoutgrid width="90%" name="layoutgrid2" class="bordered">
+                <wm-gridrow name="gridrow16">
+                    <wm-gridcolumn name="gridcolumn74" columnwidth="12">
+                        <wm-label fontweight="bold" padding="unset 0.5em" name="label48" textalign="left" class="h4" caption="Order Details"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow25_1">
+                    <wm-gridcolumn name="gridcolumn111" columnwidth="2">
+                        <wm-label padding="unset 0.5em" name="label1" caption="Order Number:" class="col-md-7 control-label" margin="unset 5px unset unset" textalign="right"></wm-label>
+                        <wm-label padding="unset 0.5em" name="lblOrder" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].ordnum"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn112" columnwidth="2">
+                        <wm-label padding="unset 0.5em" name="label3" caption="Client" class="col-md-4 control-label" textalign="right" margin="unset 5px unset unset"></wm-label>
+                        <wm-label padding="unset 0.5em" name="label4" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].clicod"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn113" columnwidth="1">
+                        <wm-label padding="unset 0.5em" name="label5" class="col-md-3 control-label" textalign="right" margin="unset 5px unset unset" width="80" caption="Mak Unt"></wm-label>
+                        <wm-label padding="unset 0.5em" name="label6" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].maklcn"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn114" columnwidth="2">
+                        <wm-label padding="unset 0.5em" name="label7" class="col-md-6 control-label" textalign="right" margin="unset 5px unset unset" caption="Order Status"></wm-label>
+                        <wm-label padding="unset 0.5em" name="label8" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].ordsts"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn115" columnwidth="1">
+                        <wm-label padding="unset 0.5em" name="label9" class="col-md-6 control-label" margin="unset 5px unset unset" textalign="right" caption="Season"></wm-label>
+                        <wm-label padding="unset 0.5em" name="label10" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].ssn"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn horizontalalign="center" name="gridcolumn105_1" columnwidth="2">
+                        <wm-label padding="unset 0.5em" name="label19" class="col-md-3 control-label" textalign="left" margin="unset 5px unset unset" caption="Merch"></wm-label>
+                        <wm-label textalign="left" padding="unset 0.5em" name="label26" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].merchusrname"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn63" columnwidth="2">
+                        <wm-label padding="unset 0.5em" name="label49" caption="Dsheet" class="col-md-3 control-label" textalign="center"></wm-label>
+                        <wm-label padding="unset 0.5em" name="lblDsheetno" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].dsheetno" textalign="center"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow26_1">
+                    <wm-gridcolumn name="gridcolumn117" columnwidth="2">
+                        <wm-label padding="unset 0.5em" name="label27" caption="UK/US/SG OrderNo" class="col-md-7 control-label" textalign="right" margin="unset 5px unset unset"></wm-label>
+                        <wm-label padding="unset 0.5em" name="label28" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].wordnumussgdesc"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn118" columnwidth="2">
+                        <wm-label padding="unset 0.5em" name="label15" class="col-md-4 control-label" textalign="right" margin="unset 5px unset unset" caption="Ord Qty"></wm-label>
+                        <wm-label padding="unset 0.5em" name="label16" class="displayField" margin="unset 2px unset unset" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].qtyorddesc"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn119" columnwidth="1">
+                        <wm-label padding="unset 0.5em" name="label17" class="col-md-6 control-label" margin="unset 5px unset unset" textalign="right" caption="Pck Unt"></wm-label>
+                        <wm-label padding="unset 0.5em" name="lblPckUnt" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].pckunt"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn120_1" columnwidth="2">
+                        <wm-label padding="unset 0.5em" name="label11" class="col-md-6 control-label" textalign="right" margin="unset 5px unset unset" caption="Shipment"></wm-label>
+                        <wm-label padding="unset 0.5em" name="label12" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].sshpdat | toDate: 'dd-MMM-yyyy'"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn121_1" columnwidth="1">
+                        <wm-label padding="unset 0.5em" name="label13" class="col-md-6 control-label" margin="unset 5px unset unset" textalign="right" caption="ShpMode"></wm-label>
+                        <wm-label padding="unset 0.5em" name="label14" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].shpmod"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn63_1" columnwidth="4">
+                        <wm-panel show="bind:(Variables.svOR003pk0HighProfileAccess.dataSet.canviewordstake==&quot;N&quot;)?false:true" name="panelHighProfile" iconclass="" autoclose="outsideClick" title="">
+                            <wm-container class="col-md-6" name="container2">
+                                <wm-label padding="unset 0.5em" name="label23" class="col-md-3 control-label" width="90" margin="unset 5px unset unset" textalign="right" caption="Follow up sts"></wm-label>
+                                <wm-label padding="unset 0.5em" name="label24" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].wfollowupStsDesc"></wm-label>
+                            </wm-container>
+                            <wm-container class="col-md-6" name="container3">
+                                <wm-label padding="unset 0.5em" name="label21" class="col-md-3 control-label" margin="unset 5px unset unset" textalign="right" width="90" caption="Order Stake"></wm-label>
+                                <wm-label padding="unset 0.5em" name="label22" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].worderstakeDesc"></wm-label>
+                            </wm-container>
+                        </wm-panel>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow27_1">
+                    <wm-gridcolumn padding="unset 0.5px unset unset" name="gridcolumn129_1" columnwidth="3">
+                        <wm-tile name="tile3" class="well">
+                            <wm-label name="label89" caption="Style" fontsize="1.2" fontunit="em"></wm-label>
+                            <wm-layoutgrid name="layoutgrid8">
+                                <wm-gridrow name="gridrow20_1">
+                                    <wm-gridcolumn name="gridcolumn63_2" columnwidth="12">
+                                        <wm-textarea readonly="true" placeholder="" name="textarea1" height="100" datavalue="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].stydes"></wm-textarea>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn padding="unset 0.5px unset unset" name="gridcolumn130_1" columnwidth="3">
+                        <wm-tile class="well" name="tile2">
+                            <wm-label name="label88_1" caption="Releases" fontsize="1.2" fontunit="em"></wm-label>
+                            <wm-layoutgrid name="layoutgrid10">
+                                <wm-gridrow name="gridrow22">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn105">
+                                        <wm-label padding="unset 0.5em" name="label51" caption="PO Rel Date" class="col-md-6 control-label" textalign="right"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label58" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].relptime | toDate: 'dd-MMM-yyyy HH:mm'" textalign="center"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow23">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn106">
+                                        <wm-label padding="unset 0.5em" name="label53" caption="Tech Sketch Rel Date" class="col-md-6 control-label" textalign="right"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label59" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].croqdate | toDate: 'dd-MMM-yyyy HH:mm'" textalign="center"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow19_1">
+                                    <wm-gridcolumn name="gridcolumn64" columnwidth="12">
+                                        <wm-label padding="unset 0.5em" name="label55" caption="Last Test Piece Rel Date" class="col-md-6 control-label" textalign="right"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label60" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].wlastTpdate | toDate: 'dd-MMM-yyyy HH:mm'" textalign="center"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn131_1" columnwidth="3">
+                        <wm-tile class="well" name="tile1">
+                            <wm-label caption="PO Section" fontsize="1.2" fontunit="em" name="label90_1"></wm-label>
+                            <wm-layoutgrid name="layoutgrid9">
+                                <wm-gridrow name="gridrow19">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn98">
+                                        <wm-label padding="unset 0.5em" name="label36" class="col-md-3 control-label" textalign="right" margin="unset 5px unset unset" width="60" caption="MakeUp"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label42" class="displayField" width="60" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].relmak"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn99">
+                                        <wm-label padding="unset 0.5em" name="label37" class="col-md-3 control-label" width="60" textalign="right" margin="unset 5px unset unset" caption="Meas"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label43" class="displayField" width="60" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].relmea"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow20">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn100">
+                                        <wm-label padding="unset 0.5em" name="label38" class="col-md-3 control-label" margin="unset 5px unset unset" textalign="right" width="60" caption="Print"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label44" class="displayField" width="60" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].relprn"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn101">
+                                        <wm-label padding="unset 0.5em" name="label39" class="col-md-3 control-label" width="60" textalign="right" margin="unset 5px unset unset" caption="Emb"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label45" width="60" class="displayField" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].relemb"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow21">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn102">
+                                        <wm-label padding="unset 0.5em" name="label40" class="col-md-3 control-label" margin="unset 5px unset unset" textalign="right" width="60" caption="Packing"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label46" class="displayField" width="60" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].relpac"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn103">
+                                        <wm-label padding="unset 0.5em" name="label41" class="col-md-3 control-label" width="60" textalign="right" margin="unset 5px unset unset" caption="Pressing"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label47" class="displayField" width="60" caption="bind:Variables.svProcMK1100PK0_MK570GetOrdDetails.dataSet.poutOrdDet[$i].relpre"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn padding="unset unset unset 2px" name="gridcolumn66" columnwidth="3">
+                        <wm-layoutgrid name="layoutgrid9_1">
+                            <wm-gridrow name="gridrow23_1">
+                                <wm-gridcolumn name="gridcolumn67" columnwidth="12">
+                                    <wm-button width="140" on-click="bthTechSketchClick($event, $scope)" accessroles="VIEWPRODDET_DWNLDTSKETCH" class="btn-default" caption="Tech Sketch" type="button" margin="unset 0.5em 0.5em 0.5em" name="bthTechSketch"></wm-button>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow24">
+                                <wm-gridcolumn name="gridcolumn69" columnwidth="12">
+                                    <wm-button width="140" on-click="btnOpenGmtRoutingClick($event, $scope)" class="btn-default" caption="Gmt and Routing" type="button" margin="unset 0.5em 0.5em 0.5em" name="btnOpenGmtRouting"></wm-button>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow25_2">
+                                <wm-gridcolumn name="gridcolumn71" columnwidth="12">
+                                    <wm-button width="140" on-click="btnOrderDocsClick($event, $scope)" class="btn-default" caption="Order Docs" type="button" margin="unset 0.5em 0.5em 0.5em" name="btnOrderDocs"></wm-button>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow26_2">
+                                <wm-gridcolumn name="gridcolumn72" columnwidth="12">
+                                    <wm-button on-click="btnOpenReportCu175Click($event, $scope)" class="btn-default" caption="Download Prod Excel" type="button" margin="unset 0.5em 0.5em 0.5em" name="btnOpenReportCu175"></wm-button>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow27_2">
+                                <wm-gridcolumn padding="unset unset 0.5px unset" name="gridcolumn73" columnwidth="12">
+                                    <wm-button width="140" on-click="btnOpenReportOr815Click($event, $scope)" class="btn-default" caption="Halt Details" type="button" margin="unset 0.5em" name="btnOpenReportOr815"></wm-button>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow17_1">
+                    <wm-gridcolumn name="gridcolumn86" columnwidth="4">
+                        <wm-label padding="unset 0.5em" name="label90" class="col-md-3 control-label" backgroundcolor="#eb7e7c" caption="" width="20" height="20" margin="unset 5px unset unset"></wm-label>
+                        <wm-label color="#eb7e7c" padding="unset 0.5em" name="label91" caption="Halted production are highlighted in red" class="col-md-11 control-label"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn91_1" columnwidth="2"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn93" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn92" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn94" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn95" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn96" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn97" columnwidth="1"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-table showrecordcount="true" gridfirstrowselect="true" title="" dataset="bind:Variables.svProcMK1100PK0_MK570GetProdDetails.dataSet.poutProdDet" navigation="Classic" name="gridProduction" spacing="condensed">
+                <wm-table-column-group name="group1" caption="Garment" col-class="blue-l1">
+                    <wm-table-column binding="gmtseq" caption="Seq" width="40px" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                    <wm-table-column binding="wgmtdes" caption="Desc" width="80px" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                    <wm-table-column binding="wgmtcat" caption="Cate -</br>gory" width="70px" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                    <wm-table-column binding="wgmttyp" caption="Typ" width="50px" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column-group name="group" caption="Colour">
+                    <wm-table-column binding="clrseq" caption="" width="30px" edit-widget-type="number" type="byte" show="true" readonly="false"></wm-table-column>
+                    <wm-table-column binding="wclrabb" caption="" width="100px" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column binding="qtyord" caption="Ord</br>Qty" widget-type="label" width="70px" textalignment="right" edit-widget-type="number" type="integer" show="true" readonly="false">
+                    <wm-label caption="{{row.getProperty('qtyord').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                </wm-table-column>
+                <wm-table-column-group name="group2" caption="Cutting">
+                    <wm-table-column binding="wcut" caption="Cut" widget-type="label" width="65px" textalignment="right" col-ng-class="{'red-d2':row.mhaltindCut=='Y'}" edit-widget-type="number" type="long" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wcut').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                    <wm-table-column binding="wcutbal" caption="Balance" widget-type="label" width="65px" textalignment="right" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wcutbal').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column-group name="group3" caption="Loading">
+                    <wm-table-column binding="wload" caption="Loaded" widget-type="label" width="65px" textalignment="right" col-ng-class="{'red-d2':row.mhaltindMak=='Y'}" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wload').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                    <wm-table-column binding="wloadbal" caption="Balance" widget-type="label" width="65px" textalignment="right" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wloadbal').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column-group name="group4" caption="Unloading">
+                    <wm-table-column binding="wunload" caption="Unloaded" widget-type="label" width="65px" textalignment="right" col-ng-class="{'red-d2':row.mhaltindMak=='Y'}" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wunload').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                    <wm-table-column binding="wunloadbal" caption="Balance" widget-type="label" width="65px" textalignment="right" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wunloadbal').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column-group name="group5" caption="Cartoning">
+                    <wm-table-column binding="wcarton" caption="Cartoned" widget-type="label" width="65px" textalignment="right" col-ng-class="{'red-d2':row.mhaltindCrt=='Y'}" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wcarton').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                    <wm-table-column binding="wcartonbal" caption="Balance" widget-type="label" width="65px" textalignment="right" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wcartonbal').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column-group name="group6" caption="Export">
+                    <wm-table-column binding="wexport" caption="Exported" widget-type="label" width="65px" textalignment="right" col-ng-class="{'red-d2':row. mhaltindExp=='Y'}" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wexport').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                    <wm-table-column binding="wexportbal" caption="Balance" widget-type="label" width="65px" textalignment="right" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wexportbal').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column-group name="group7" caption="Embroidery">
+                    <wm-table-column binding="wemb" caption="Emb" widget-type="label" width="65px" col-ng-class="{'red-d2':row. mhaltindEmb=='Y'}" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wemb').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                    <wm-table-column binding="wembbal" caption="Balance" widget-type="label" width="65px" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wembbal').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column-group name="group8" caption="Print">
+                    <wm-table-column binding="wprint" caption="Printed" widget-type="label" width="65px" textalignment="right" col-ng-class="{'red-d2':row.mhaltindPrt=='Y'}" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wprint').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                    <wm-table-column binding="wprintbal" caption="Balance" widget-type="label" width="65px" textalignment="right" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wprintbal').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column-group name="group9" caption="Heat Press">
+                    <wm-table-column binding="wheatpress" caption="Heat</br>Prs" widget-type="label" width="80px" textalignment="right" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wheatpress').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                    <wm-table-column binding="wheatpressbal" caption="Balance" widget-type="label" width="80px" textalignment="right" edit-widget-type="text" type="string" show="true" readonly="false">
+                        <wm-label caption="{{row.getProperty('wheatpressbal').toLocaleString()}}" class="" data-ng-class=""></wm-label>
+                    </wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column binding="customField" caption="Download" widget-type="button" width="140px" edit-widget-type="text" type="string" accessroles="VIEWPRODDET_DWNLDPATTERN" searchable="false" show="true" readonly="false">
+                    <wm-button caption="Pattern" show="true" class="btn-sm btn-primary" iconclass="wi wi-file-download" on-click="btnDownloadPatternClick('{{row.ordnum}}','{{row.gmtseq}}')" data-ng-class=""></wm-button>
+                </wm-table-column>
+            </wm-table>
+            <wm-layoutgrid name="layoutgrid4">
+                <wm-gridrow name="gridrow17" padding="unset unset 10px unset">
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn90">
+                        <wm-label padding="unset 0.5em" caption="bind:&quot;Totals for Order &quot; + Widgets.lblOrder.caption" name="label86" class="col-md-12 control-label text-info" fontsize="14"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn91"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn72_1" columnwidth="6"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow padding="2px unset" class="text-info bordered" name="gridrow25">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn120">
+                        <wm-layoutgrid name="layoutgrid11">
+                            <wm-gridrow name="gridrow26">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn122">
+                                    <wm-label padding="unset 0.5em" name="label50" caption="OrdQty" class="col-md-3 control-label" width="50" margin="unset 5px unset unset" textalign="right"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label54" class="displayField" width="65" caption="bind:Widgets.gridProduction.selecteditem.wtotord.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn123">
+                                    <wm-label padding="unset 0.5em" name="label51_1" caption="Cut" class="col-md-3 control-label" width="50" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label55_1" class="displayField" width="65" caption="bind:Widgets.gridProduction.selecteditem.wtotcut.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn130">
+                                    <wm-label padding="unset 0.5em" name="label53_1" caption="Load" class="col-md-3 control-label" width="60" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label57_1" class="displayField" width="55" caption="bind:Widgets.gridProduction.selecteditem.wtotload.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow27">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn124"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn125">
+                                    <wm-label padding="unset 0.5em" name="label52" caption="BalCut" class="col-md-3 control-label" width="50" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="lblTotBalcut" class="displayField" width="65" caption="bind:Widgets.gridProduction.selecteditem.wtotcutbal.toLocaleString()" color="#d44a4a"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn131">
+                                    <wm-label padding="unset 0.5em" name="label58_1" caption="BalLoad" class="col-md-3 control-label" width="60" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="lblTotBalLoad" class="displayField" width="55" caption="bind:Widgets.gridProduction.selecteditem.wtotloadbal.toLocaleString()" color="#d44a4a"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow25_3">
+                                <wm-gridcolumn name="gridcolumn67_1" columnwidth="12">
+                                    <wm-label textalign="center" padding="unset 0.5em" name="label87" caption="** Total Balance Calculated as per Size" class="col-md-12 control-label"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn121">
+                        <wm-layoutgrid name="layoutgrid12">
+                            <wm-gridrow name="gridrow28">
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn126">
+                                    <wm-label padding="unset 0.5em" name="label60_1" caption="UnLoad" class="col-md-3 control-label" width="65" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label61" class="displayField" width="55" caption="bind:Widgets.gridProduction.selecteditem.wtotuld.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn132">
+                                    <wm-label padding="unset 0.5em" name="label64" caption="Carton" class="col-md-3 control-label" width="65" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label65" class="displayField" width="55" caption="bind:Widgets.gridProduction.selecteditem.wtotcarton.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn133">
+                                    <wm-label padding="unset 0.5em" name="label68" caption="Export" class="col-md-3 control-label" width="65" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label69" class="displayField" width="55" caption="bind:Widgets.gridProduction.selecteditem.wtotexp.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn134">
+                                    <wm-label padding="unset 0.5em" name="label72" caption="EMB" class="col-md-3 control-label" width="65" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label73" class="displayField" width="55" caption="bind:Widgets.gridProduction.selecteditem.wtotemb.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn135">
+                                    <wm-label padding="unset 0.5em" name="label76" caption="Print" class="col-md-3 control-label" width="65" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label77" class="displayField" width="55" caption="bind:Widgets.gridProduction.selecteditem.wtotprint.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn127">
+                                    <wm-label padding="unset 0.5em" name="label80" caption="HeatPrs" class="col-md-4 control-label" width="70" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="label81" class="displayField" width="50" caption="bind:Widgets.gridProduction.selecteditem.wtotheatpress.toLocaleString()"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow29">
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn128">
+                                    <wm-label padding="unset 0.5em" name="label62" caption="BalUnLoad" class="col-md-3 control-label" width="65" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="lblTotBalUnLoad" class="displayField" width="55" caption="bind:Widgets.gridProduction.selecteditem.wtotunloadbal.toLocaleString()" color="#d44a4a"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn136">
+                                    <wm-label padding="unset 0.5em" name="label66" caption="BalCarton" class="col-md-3 control-label" width="65" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="lblTotBalCrt" class="displayField" width="55" caption="bind:Widgets.gridProduction.selecteditem.wtotcartonbal.toLocaleString()" color="#d44a4a"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn137">
+                                    <wm-label padding="unset 0.5em" name="label70" caption="BalExport" class="col-md-3 control-label" width="65" textalign="right" margin="unset 5px unset unset"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="lblTotBalExp" class="displayField" width="55" caption="bind:Widgets.gridProduction.selecteditem.wtotexpbal.toLocaleString()" color="#d44a4a"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn138">
+                                    <wm-label padding="unset 0.5em" name="label74" caption="BalEMB" class="col-md-3 control-label" width="65" margin="unset 5px unset unset" textalign="right"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="lblBalEmb" class="displayField" width="55" caption="bind:Widgets.gridProduction.selecteditem.wtotembbal.toLocaleString()" color="#d44a4a"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn139">
+                                    <wm-label padding="unset 0.5em" name="label78" caption="BalPrint" class="col-md-3 control-label" width="65" margin="unset 5px unset unset" textalign="right"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="lblTotBalPrint" class="displayField" width="55" caption="bind:Widgets.gridProduction.selecteditem.wtotprintbal.toLocaleString()" color="#d44a4a"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn129">
+                                    <wm-label padding="unset 0.5em" name="label82" caption="BalHeatPrs" class="col-md-5 control-label" width="70" margin="unset 5px unset unset" textalign="right"></wm-label>
+                                    <wm-label textalign="right" padding="unset 0.5em" name="lblTotBalHeatprs" class="displayField" width="50" caption="bind:Widgets.gridProduction.selecteditem.wtotheatpressbal.toLocaleString()" color="#d44a4a"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-view class="dialog-view" name="view1">
+        <wm-alertdialog name="notificationalertdialog" controller="NotificationDialogController" notificationdialog="alert" message="{{notification.text}}" title="{{notification.title}}" oktext="{{notification.okButtonText}}" alerttype="{{notification.alerttype}}"
+            on-ok="variableOnOk()" on-close="variableOnClose()"></wm-alertdialog>
+    </wm-view>
+</wm-page>

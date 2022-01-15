@@ -1,0 +1,67 @@
+{
+  "statFormattedProgUrl" : {
+    "_id" : "wm-statFormattedProgUrl-wm.Variable-1527839852701",
+    "name" : "statFormattedProgUrl",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "itemseq" : "",
+      "progname" : "",
+      "params" : "",
+      "wmparams" : "",
+      "progurl" : "",
+      "wmitempath" : ""
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "statMenuMK" : {
+    "_id" : "wm-staticVariable1-wm.Variable-1526898367539",
+    "name" : "statMenuMK",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "Sortseq" : 1,
+      "progName" : "LoadingRejects",
+      "Action" : "Variables.goToPage_QryLoadingUnloading.invoke()"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "svAppMK1100pk0GetMenuItems" : {
+    "_id" : "wm-svAppMK1100pk0GetMenuItems-wm.ServiceVariable-1524570979246",
+    "name" : "svAppMK1100pk0GetMenuItems",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:pageParams.pOrdnum",
+      "type" : "string"
+    }, {
+      "target" : "pMenuModule",
+      "value" : "MKQRYPRD",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Mk1100pk0getMenuItemsResponse",
+    "service" : "pfsdb",
+    "operation" : "executeMk1100pk0GetMenuItems",
+    "operationId" : "ProcedureExecutionController_executeMk1100pk0GetMenuItems",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svAppMK1100pk0GetMenuItemsonBeforeUpdate($event, $scope)",
+    "onSuccess" : "svAppMK1100pk0GetMenuItemsonSuccess($event, $scope)",
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  }
+}

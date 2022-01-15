@@ -1,0 +1,36 @@
+[ {
+  "urlPattern" : "/pages/Login/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/MakeupAudit/**",
+  "permission" : "Role",
+  "roles" : [ "MKUP_AUDIT_VIEWPAGE" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/MkupMinsEvolution/**",
+  "permission" : "Role",
+  "roles" : [ "MINSEVOLUTION_VIEWPAGE" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/ViewGarmentPhoto/**",
+  "permission" : "Role",
+  "roles" : [ "MKPLANNING_VIEWGMTPHOTO" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/ViewOrderFitComments/**",
+  "permission" : "Role",
+  "roles" : [ "MKPLANNING_VIEWFITCOMMENTS" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/ViewProductionDetails/**",
+  "permission" : "Role",
+  "roles" : [ "VIEWPRODDET_VIEWPAGE" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/**",
+  "permission" : "Authenticated",
+  "roles" : null,
+  "httpMethod" : null
+} ]

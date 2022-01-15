@@ -1,0 +1,59 @@
+{
+  "srvGetCuttingMenu" : {
+    "_id" : "wm-srvGetCuttingMenu-wm.ServiceVariable-1530248090716",
+    "name" : "srvGetCuttingMenu",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pMenuModule",
+      "value" : "CUPROD",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Mk1100pk0getMenuItemsResponse",
+    "service" : "pfsdb",
+    "operation" : "executeMk1100pk0GetMenuItems",
+    "operationId" : "ProcedureExecutionController_executeMk1100pk0GetMenuItems",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "statCuttingMenu" : {
+    "_id" : "wm-statCuttingMenu-wm.Variable-1530248280724",
+    "name" : "statCuttingMenu",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "bind:Variables.srvGetCuttingMenu.dataSet.poutMenuItems",
+      "type" : "string"
+    } ],
+    "dataSet" : [ {
+      "dataValue" : ""
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "statMenuEfficiency" : {
+    "_id" : "wm-statMenuEfficiency-wm.Variable-1529904726461",
+    "name" : "statMenuEfficiency",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "progname" : "Production Mins Evolution",
+      "Action" : "Variables.goToPage_MkupMinsEvolution.invoke();"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  }
+}

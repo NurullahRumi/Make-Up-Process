@@ -1,0 +1,116 @@
+[ {
+  "name" : "Common",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "Login",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "MakeUpMainMenu",
+  "type" : "TOPNAV",
+  "params" : [ ]
+}, {
+  "name" : "MakeupAudit",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "pParam1",
+    "type" : "string"
+  }, {
+    "name" : "pParam2",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "MkupMinsEvolution",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "pParam1",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "QryLoadingUnloading",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "pOrdnum",
+    "type" : "string"
+  }, {
+    "name" : "pGmtseq",
+    "type" : "string"
+  }, {
+    "name" : "pClrseqg",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "ViewGarmentPhoto",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "pParam1",
+    "type" : "string"
+  }, {
+    "name" : "pOrdnum",
+    "type" : "string"
+  }, {
+    "name" : "pGmtseq",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "ViewOrderFitComments",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "pOrdnum",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "ViewProductionDetails",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "pParam1",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "footer",
+  "type" : "FOOTER",
+  "params" : [ ]
+}, {
+  "name" : "header",
+  "type" : "HEADER",
+  "params" : [ {
+    "name" : "pTitle",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "leftnav",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "partialJobLoadUnloadQty",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "pOrdnum",
+    "type" : "string"
+  }, {
+    "name" : "pGmtseq",
+    "type" : "string"
+  }, {
+    "name" : "pClrseqg",
+    "type" : "integer"
+  }, {
+    "name" : "pSizeseq",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "rightnav",
+  "type" : "RIGHTNAV",
+  "params" : [ ]
+}, {
+  "name" : "topnav",
+  "type" : "TOPNAV",
+  "params" : [ {
+    "name" : "pOrdnum",
+    "type" : "string"
+  } ]
+} ]

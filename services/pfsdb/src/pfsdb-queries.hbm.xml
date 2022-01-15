@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="qryCanViewOrdStake">
+        <![CDATA[
+        select or003pk0.sfunc_high_profile_access(upper(:SERVER__USER_NAME__pUsrid), null, null) canViewOrdStake
+from dual
+        ]]>
+    <query-param name="SERVER__USER_NAME__pUsrid" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryCanViewOrdStake__count">
+        <![CDATA[
+        select count(*) from (select or003pk0.sfunc_high_profile_access(upper(:SERVER__USER_NAME__pUsrid), null, null) canViewOrdStake
+from dual) wmTempTable
+        ]]>
+    <query-param name="SERVER__USER_NAME__pUsrid" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qrySy9200pk0CallOR210">
+        <![CDATA[
+        select sy9200pk0.sproc_call_fmbpath('/prod/pfs/or/frm/or210oc0.fmx', :pOtherParams) progurl
+from dual
+        ]]>
+    <query-param name="pOtherParams" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qrySy9200pk0CallOR210__count">
+        <![CDATA[
+        select count(*) from (select sy9200pk0.sproc_call_fmbpath('/prod/pfs/or/frm/or210oc0.fmx', :pOtherParams) progurl
+from dual) wmTempTable
+        ]]>
+    <query-param name="pOtherParams" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qrySy9200pk0GetOrdRoutingUrl">
+        <![CDATA[
+        select sy9200pk0.sproc_call_fmbpath('/prod/pfs/or/frm/or210oc0.fmx', :pOtherParams) progurl
+from dual
+        ]]>
+    <query-param name="pOtherParams" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qrySy9200pk0GetOrdRoutingUrl__count">
+        <![CDATA[
+        select count(*) from (select sy9200pk0.sproc_call_fmbpath('/prod/pfs/or/frm/or210oc0.fmx', :pOtherParams) progurl
+from dual) wmTempTable
+        ]]>
+    <query-param name="pOtherParams" type="java.lang.String"/>
+    </sql-query>
+</hibernate-mapping>

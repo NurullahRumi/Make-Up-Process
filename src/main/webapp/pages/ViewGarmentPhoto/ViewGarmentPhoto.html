@@ -1,0 +1,24 @@
+<wm-page data-ng-controller="ViewGarmentPhotoPageController" pagetitle="View Garment Photo" name="page1"> 
+    <wm-header content="header" name="header1"> 
+        <wm-param name="pTitle" value="bind:Variables.statPrgName.dataSet.dataValue" type="string"></wm-param> 
+    </wm-header> 
+    <wm-content name="content1"> 
+        <wm-page-content columnwidth="12" name="page_content1"> 
+            <wm-layoutgrid name="layoutgrid1"> 
+                <wm-gridrow name="gridrow1"> 
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn1"> 
+                        <wm-label padding="unset 0.5em" name="label1" caption="Order" class="displayPrompt"></wm-label> 
+                        <wm-label padding="unset 0.5em" name="lblOrderno" class="displayField" caption="bind:pageParams.pOrdnum"></wm-label> 
+                        <wm-label padding="unset 0.5em" name="label3" caption="Gmt Sq" class="displayPrompt"></wm-label> 
+                        <wm-label padding="unset 0.5em" name="lblGmtseq" class="displayField" caption="bind:pageParams.pGmtseq"></wm-label> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+                <wm-gridrow name="gridrow3"> 
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn5"> 
+                        <wm-picture name="picture2" picturesource="bind:&quot;services/pfsdb/procedureExecutor/procedure/execute/procMK103PK0QRYORD_GetOrdgmtImage?pPrgid=&quot; + Variables.statPrgid.dataSet.dataValue + &quot;&amp;pOrdnum=&quot; + pageParams.pOrdnum + &quot;&amp;pGmtseq=&quot; + pageParams.pGmtseq + &quot;&amp;downloadAsAttachment=false&quot;" encodeurl="true" pictureaspect="None" shape="thumbnail" width="450"></wm-picture> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+            </wm-layoutgrid> 
+        </wm-page-content> 
+    </wm-content> 
+</wm-page>
